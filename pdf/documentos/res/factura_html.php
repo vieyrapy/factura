@@ -81,7 +81,7 @@ table.page_footer {width: 100%; border: none; background-color: white; padding: 
        <br>
 		<table cellspacing="0" style="width: 100%; text-align: left; font-size: 11pt;">
         <tr>
-           <td style="width:35%;" class='midnight-blue'>VENDEDOR</td>
+           <td style="width:35%;" class='midnight-blue'>ATENDIDO POR:</td>
 		  <td style="width:25%;" class='midnight-blue'>FECHA</td>
 		   <td style="width:40%;" class='midnight-blue'>FORMA DE PAGO</td>
         </tr>
@@ -93,7 +93,7 @@ table.page_footer {width: 100%; border: none; background-color: white; padding: 
 				echo $rw_user['firstname']." ".$rw_user['lastname'];
 			?>
 		   </td>
-		  <td style="width:25%;"><?php echo date("d/m/Y");?></td>
+		  <td style="width:25%;"><?php echo date("d/m/Y H:i:s");?></td>
 		   <td style="width:40%;" >
 				<?php 
 				if ($condiciones==1){echo "Efectivo";}
