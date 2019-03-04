@@ -87,7 +87,7 @@ Sistemas de facturas y recibos
 						$nombre_vendedor=$row['firstname']." ".$row['lastname'];
 						$estado_factura=$row['estado_factura'];
 						if ($estado_factura==1){$text_estado="Pagada";$label_class='label-success';}
-						else{$text_estado="Pendiente";$label_class='label-warning';}
+						else{$text_estado="Anulado";$label_class='label-danger';}
 						$total_venta=$row['total_venta'];
 					?>
 					<tr>
@@ -100,7 +100,7 @@ Sistemas de facturas y recibos
 					<td class="text-right">
 						<a href="editar_factura.php?id_factura=<?php echo $id_factura;?>" class='btn btn-default' title='Editar factura' ><i class="glyphicon glyphicon-edit"></i></a> 
 						<a href="#" class='btn btn-default' title='Descargar factura' onclick="imprimir_factura('<?php echo $id_factura;?>');"><i class="glyphicon glyphicon-download"></i></a> 
-						<a href="#" class='btn btn-default' title='Borrar factura' onclick="eliminar('<?php echo $numero_factura; ?>')"><i class="glyphicon glyphicon-trash"></i> </a>
+						<!--<a href="#" class='btn btn-default' title='Borrar factura' onclick="eliminar('<?php echo $numero_factura; ?>')"><i class="glyphicon glyphicon-trash"></i> </a>-->
 					</td>
 						
 					</tr>
