@@ -114,7 +114,7 @@ class Login
     }
 
     /**
-     * simply return the current state of the user's login
+     * simplemente devuelve el estado actual de inicio de sesión del usuario
      * @return boolean user's login status
      */
     public function isUserLoggedIn()

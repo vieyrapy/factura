@@ -26,9 +26,11 @@
 	?>  
 
 		<div class="col-xs-12 col-sm-6 col-md-2">
-	    <iframe width="400" height="300" src="http://www.cambioschaco.com.py/widgets/cotizacion/?lang=es" frameborder="0"> </iframe> </div>
-
-
+			<div class="container">
+	    		<iframe width="400" height="300" src="http://www.cambioschaco.com.py/widgets/cotizacion/?lang=es" frameborder="0"> </iframe> 
+	    	</div>
+		</div>
+		
 	<div class="col-xs-12 col-sm-6 col-md-10">
 	    <div class="container">
 			<div class="panel panel-info">
