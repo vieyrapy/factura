@@ -39,7 +39,7 @@ Sistemas de facturas y recibos
 		if ( $_GET['q'] != "" )
 		{
 			// se realiza un filtrado SQL para la busqueda de la factura nombre, ruc, numero de factura
-		$sWhere.= " and  (clientes.nombre_cliente like '%$q%' or facturas.numero_factura like '%$q%' or  clientes.ruc_cliente like '%$q%') ";
+		$sWhere.= " and (clientes.nombre_cliente like '%$q%'or facturas.numero_factura like '%$q%')";
 			
 		}
 		
