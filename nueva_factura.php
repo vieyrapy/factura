@@ -18,7 +18,7 @@ Sistema para control de facturas
 	require_once ("config/conexion.php");//Contiene funcion que conecta a la base de datos
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <?php include("head.php");?>
   </head>
@@ -44,18 +44,27 @@ Sistema para control de facturas
 					  <input type="text" class="form-control input-sm" id="nombre_cliente" placeholder="Selecciona un cliente" required>
 					  <input id="id_cliente" type='hidden'>	
 				  </div>
+
+				  <label for="ruc1" class="col-md-1 control-label">RUC/CI</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control input-sm" id="ruc1" placeholder="RUC/CI" readonly>
+							</div>
+
 				  <label for="tel1" class="col-md-1 control-label">Teléfono</label>
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="tel1" placeholder="Teléfono" readonly>
 							</div>
+				<div hidden>
 					<label for="mail" class="col-md-1 control-label">Email</label>
 							<div class="col-md-3">
 								<input type="text" class="form-control input-sm" id="mail" placeholder="Email" readonly>
 							</div>
+				</div>
 				 </div>
-						<div class="form-group row">
+						<div class="form-group row"> 
+							<div hidden>
 							<label for="empresa" class="col-md-1 control-label">Vendedor</label>
-							<div class="col-md-3">
+							<div class="col-md-3" >
 								<select class="form-control input-sm" id="id_vendedor">
 									<?php
 										$sql_vendedor=mysqli_query($con,"select * from users order by lastname");
@@ -68,12 +77,15 @@ Sistema para control de facturas
 												$selected="";
 											}
 											?>
-											<option value="<?php echo $id_vendedor?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
+											<option  value="<?php echo $id_vendedor?>" <?php echo $selected;?>><?php echo $nombre_vendedor?></option>
 											<?php
 										}
 									?>
 								</select>
 							</div>
+
+						</div>
+
 							<label for="tel2" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo date("d/m/Y");?>" readonly>
@@ -137,6 +149,7 @@ Sistema para control de facturas
 								event.preventDefault();
 								$('#id_cliente').val(ui.item.id_cliente);
 								$('#nombre_cliente').val(ui.item.nombre_cliente);
+								$('#ruc1').val(ui.item.ruc_cliente);
 								$('#tel1').val(ui.item.telefono_cliente);
 								$('#mail').val(ui.item.email_cliente);
 																
@@ -151,6 +164,7 @@ Sistema para control de facturas
 						if (event.keyCode== $.ui.keyCode.LEFT || event.keyCode== $.ui.keyCode.RIGHT || event.keyCode== $.ui.keyCode.UP || event.keyCode== $.ui.keyCode.DOWN || event.keyCode== $.ui.keyCode.DELETE || event.keyCode== $.ui.keyCode.BACKSPACE )
 						{
 							$("#id_cliente" ).val("");
+							$("#ruc1" ).val("");
 							$("#tel1" ).val("");
 							$("#mail" ).val("");
 											
@@ -158,6 +172,7 @@ Sistema para control de facturas
 						if (event.keyCode==$.ui.keyCode.DELETE){
 							$("#nombre_cliente" ).val("");
 							$("#id_cliente" ).val("");
+							$("#ruc1" ).val("");
 							$("#tel1" ).val("");
 							$("#mail" ).val("");
 						}

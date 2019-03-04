@@ -30,7 +30,7 @@ Sistema para control de facturas
 				$rw_factura=mysqli_fetch_array($sql_factura);
 				$id_cliente=$rw_factura['id_cliente'];
 				$nombre_cliente=$rw_factura['nombre_cliente'];
-				$telefono_cliente=$rw_factura['telefono_cliente'];
+				$telefono_cliente=$rw_factura['telefono_cliente']; 
 				$email_cliente=$rw_factura['email_cliente'];
 				$id_vendedor_db=$rw_factura['id_vendedor'];
 				$fecha_factura=date("d/m/Y", strtotime($rw_factura['fecha_factura']));
@@ -89,11 +89,14 @@ Sistema para control de facturas
 							</div>
 
 
+						
+
 			 </div>
 
 
 
 						<div class="form-group row">
+							<div hidden>
 							<label for="empresa" class="col-md-1 control-label">Vendedor</label>
 							<div class="col-md-3" >
 								<select class="form-control input-sm" id="id_vendedor" name="id_vendedor"  >
@@ -113,11 +116,10 @@ Sistema para control de facturas
 										}
 									?>
 								</select>
-
-
+							</div>
+</div>
 							
 
-							</div>
 							<label for="tel2" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
 								<input type="text" class="form-control input-sm" id="fecha" value="<?php echo $fecha_factura;?>" readonly>
@@ -128,7 +130,7 @@ Sistema para control de facturas
 									<option value="1" <?php if ($condiciones==1){echo "selected";}?>>Efectivo</option>
 									<option value="2" <?php if ($condiciones==2){echo "selected";}?>>Cheque</option>
 									<option value="3" <?php if ($condiciones==3){echo "selected";}?>>Transferencia bancaria</option>
-									<option value="4" <?php if ($condiciones==4){echo "selected";}?>>Crédito</option>
+									<option value="4" <?php if ($condiciones==4){echo "selected";}?>>Tarjeta de Crédito</option>
 								</select>
 							</div>
 							<div class="col-md-2">
