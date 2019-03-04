@@ -39,7 +39,7 @@ Sistemas de facturas y recibos
 		if ( $_GET['q'] != "" )
 		{
 			// se realiza un filtrado SQL para la busqueda de la factura nombre, ruc, numero de factura
-		$sWhere.= " and  (clientes.nombre_cliente like '%$q%' or clientes.ruc_cliente like '%$q%' or facturas.numero_factura like '%$q%')";
+		$sWhere.= " and  (clientes.nombre_cliente like '%$q%' or facturas.numero_factura like '%$q%' or  clientes.ruc_cliente like '%$q%') ";
 			
 		}
 		
@@ -93,7 +93,7 @@ Sistemas de facturas y recibos
 					<tr>
 						<td><?php echo $numero_factura; ?></td>
 						<td><?php echo $fecha; ?></td>
-						<td><a href="#" data-toggle="tooltip" data-placement="top" title="<i class='glyphicon glyphicon-phone'></i> <?php echo $telefono_cliente;?><br><i class='glyphicon glyphicon-envelope'></i>  <?php echo $email_cliente;?>" ><?php echo $nombre_cliente;?></a></td>
+						<td><a href="#" data-toggle="tooltip" data-placement="top" title="<i class='glyphicon glyphicon-phone'></i> <?php echo $telefono_cliente;?><br><i class='glyphicon glyphicon-envelope'></i>  <?php echo $email_cliente;?> <br><p>RUC:<?php echo $ruc_cliente;?></p>" ><?php echo $nombre_cliente;?></a></td>
 						<td><?php echo $nombre_vendedor; ?></td>
 						<td><span class="label <?php echo $label_class;?>"><?php echo $text_estado; ?></span></td>
 						<td class='text-right'><?php echo number_format ($total_venta,0); ?></td>					
