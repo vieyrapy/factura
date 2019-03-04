@@ -83,10 +83,11 @@ Sistemas de facturas y recibos
 			  <table class="table">
 				<tr  class="info">
 					<th>Nombre</th>
+					<th>RUC/CI</th>
 					<th>Teléfono</th>
 					<th>Email</th>
 					<th>Dirección</th>
-					<th>Estado</th>
+					<!--<th>Estado</th>-->
 					<th>Agregado</th>
 					<th class='text-right'>Acciones</th>
 					
@@ -95,6 +96,7 @@ Sistemas de facturas y recibos
 				while ($row=mysqli_fetch_array($query)){
 						$id_cliente=$row['id_cliente'];
 						$nombre_cliente=$row['nombre_cliente'];
+						$ruc_cliente=$row['ruc_cliente'];
 						$telefono_cliente=$row['telefono_cliente'];
 						$email_cliente=$row['email_cliente'];
 						$direccion_cliente=$row['direccion_cliente'];
@@ -106,6 +108,7 @@ Sistemas de facturas y recibos
 					?>
 					
 					<input type="hidden" value="<?php echo $nombre_cliente;?>" id="nombre_cliente<?php echo $id_cliente;?>">
+					<input type="hidden" value="<?php echo $ruc_cliente;?>" id="ruc_cliente<?php echo $id_cliente;?>">
 					<input type="hidden" value="<?php echo $telefono_cliente;?>" id="telefono_cliente<?php echo $id_cliente;?>">
 					<input type="hidden" value="<?php echo $email_cliente;?>" id="email_cliente<?php echo $id_cliente;?>">
 					<input type="hidden" value="<?php echo $direccion_cliente;?>" id="direccion_cliente<?php echo $id_cliente;?>">
@@ -114,10 +117,11 @@ Sistemas de facturas y recibos
 					<tr>
 						
 						<td><?php echo $nombre_cliente; ?></td>
+						<td ><?php echo $ruc_cliente; ?></td>
 						<td ><?php echo $telefono_cliente; ?></td>
 						<td><?php echo $email_cliente;?></td>
 						<td><?php echo $direccion_cliente;?></td>
-						<td><?php echo $estado;?></td>
+						<!--<td><?php echo $estado;?></td>-->
 						<td><?php echo $date_added;?></td>
 						
 					<td ><span class="pull-right">
