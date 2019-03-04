@@ -16,13 +16,13 @@ Sistema para control de facturas
 	$active_clientes="";
 	$active_usuarios="";	
 	$active_perfil="active";	
-	$title="Configuración | Simple Invoice";
+	$title="Configuración | Studio Sánchez";
 	
 	$query_empresa=mysqli_query($con,"select * from perfil where id_perfil=1");
 	$row=mysqli_fetch_array($query_empresa);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
 	<?php include("head.php");?>
   </head>
