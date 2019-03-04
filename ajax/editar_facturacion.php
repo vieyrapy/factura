@@ -73,18 +73,18 @@ $simbolo_moneda=get_row('perfil','moneda', 'id_perfil', 1);
 	$update=mysqli_query($con,"update facturas set total_venta='$total_factura' where id_factura='$id_factura'");
 ?>
 <tr>
-	<td class='text-right' colspan=4>SUBTOTAL <?php echo $simbolo_moneda;?></td>
+	<td class='text-right' colspan=4><strong>SUBTOTAL <?php echo $simbolo_moneda;?></strong></td>
 	<td class='text-right'><?php echo number_format($subtotal,0);?></td>
 	<td></td>
 </tr>
 <tr>
-	<td class='text-right' colspan=4>IVA (<?php echo $impuesto;?>)% <?php echo $simbolo_moneda;?></td>
+	<td class='text-right' colspan=4><strong>IVA (<?php echo $impuesto;?>)% <?php echo $simbolo_moneda;?></strong></td>
 	<td class='text-right'><?php echo number_format($total_iva,0);?></td>
 	<td></td>
 </tr>
 <tr>
-	<td class='text-right' colspan=4>TOTAL <?php echo $simbolo_moneda;?></td>
-	<td class='text-right'><?php echo number_format($total_factura,0);?></td>
+	<td class='text-right' colspan=4><strong>TOTAL <?php echo $simbolo_moneda;?></strong></td>
+	<td class='text-right'><strong><?php echo number_format($total_factura,0);?></strong></td>
 	<td></td>
 </tr>
 
