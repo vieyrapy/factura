@@ -15,7 +15,7 @@ Sistema para control de facturas
 	$active_productos="";
 	$active_clientes="";
 	$active_usuarios="active";	
-	$title="Usuarios | Simple Invoice";
+	$title="Usuarios | Studio Sánchez";
 ?>
 <!DOCTYPE html>
 <html lang="en">

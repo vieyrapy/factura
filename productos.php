@@ -16,10 +16,10 @@ Sistema para control de facturas
 	$active_productos="active";
 	$active_clientes="";
 	$active_usuarios="";	
-	$title="Productos | Simple Invoice";
+	$title="Productos | Studio Sánchez";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <?php include("head.php");?>
   </head>
